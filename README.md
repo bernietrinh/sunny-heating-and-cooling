@@ -1,2 +1,2 @@
 # sunny-heating-and-cooling
-Simply marketing website for Sunny Heating and Cooling
+Simply universal React website for Sunny Heating and Cooling using Next.js
