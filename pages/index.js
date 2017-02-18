@@ -1,14 +1,26 @@
 import Head from 'next/head'
-import React, { Component } from 'react';
-
-const sendEmail = () => {
-  console.log('send email');
-  Server.connect({
-    user: 'bernie.trinh26@gmail.com'
-  });
-};
+import React, { Component } from 'react'
+import Header from '../components/header'
+import Banner from '../components/banner'
+import Services from '../components/services'
+import Products from '../components/products'
+import Footer from '../components/footer'
 
 class Index extends Component {
+
+  // for smooth scroll https://www.npmjs.com/package/react-scroll
+
+  getQuote() {
+    console.log('get quote');
+  }
+
+  navigateToServices() {
+    console.log('navigate to services');
+  }
+
+  navigateToAbout() {
+    console.log('navigate to about');
+  }
 
   render() {
     return <div>
@@ -16,10 +28,14 @@ class Index extends Component {
         <title>Sunny Heating &amp; Cooling</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <p>Hello world!</p>
-      <div>Welcome to next.js!</div>
 
-      <button onClick={sendEmail}>Send email</button>
+      <Header gotoAbout={this.navigateToAbout} gotoServices={this.navigateToServices} />
+      <Banner getQuote={this.getQuote} gotoServices={this.navigateToServices} />
+
+      <Services />
+      <Products />
+
+      <Footer />
     </div>
   }
 }
