@@ -1,21 +1,46 @@
 import React from 'react';
+import cxs from 'cxs';
 
-class Header extends React.Component {
+const styles = {
+  header: cxs({
+    position: 'absolute',
+    width: '100%',
+    // top: '0',
+    // right: '0',
+    // left: '0',
+    display: 'flex',
+    background: 'none',
+    flexWrap: 'nowrap',
+    justifyContent: 'space-between',
+    marginTop: '1rem',
+    marginLeft: '1rem',
+    marginRight: '1rem'
+  }),
+  contact: cxs({
+    padding: '.5rem',
+    fontSize: '1.8rem',
+    fontFamily: `'Montserrat', sans-serif`,
+    b: {
+      fontWeight: 'bold'
+    }
+  }),
+  logo: cxs({
+    width: '11rem'
+  })
+};
 
-  render() {
-    return (
-      <div>
-        <header>
-        <img src="" alt=""/>
-        <div className="contact"><b>For immediate services:</b> 416-809-7898</div>
-        <nav>
-          <a className="about" href="javascript:void(0)" onClick={this.props.gotoAbout}>About Us</a>
-          <a className="services" href="javascript:void(0)" onClick={this.props.gotoServices}>Services</a>
-        </nav>
+
+const header = () => {
+  return (
+    <div>
+      <header className={styles.header}>
+        <img className={styles.logo} src="/static/images/logo.svg" alt=""/>
+        <div className={styles.contact}><p><b>For immediate services:</b> 416-566-1820</p></div>
+        <div></div>
       </header>
     </div>
-    )
-  }
-}
+  )
+};
 
-export default Header;
+
+export default header;
