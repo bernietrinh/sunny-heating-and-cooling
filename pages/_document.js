@@ -24,9 +24,11 @@ export default class extends Document {
         <title>Sunny Heating &amp; Cooling</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
         <link rel="stylesheet" type="text/css" href="/static/reset.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUFUokwnQ_lMg1fJQEfCH_IE60-TCDHTw" />
         <style dangerouslySetInnerHTML={{ __html: this.props.style }} />
+
       </Head>
 
       <body>

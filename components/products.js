@@ -24,7 +24,7 @@ const styles = {
     margin: '0 auto'
   }),
   imageWrapper: cxs({
-    width: '30%'
+    width: '25%'
   }),
   image: cxs({
     width: '100%'
@@ -33,16 +33,18 @@ const styles = {
 
 export default () => {
   return (
-    <div className={styles.products}>
-      {
-        brands.map((brand, key) => {
-          return (
-            <section key={key} className={styles.imageWrapper}>
-              <img src={brand.imageUrl} alt="" className={styles.image} />
-            </section>
-          )
-        })
-      }
+    <div>
+      <div className={styles.products}>
+        {
+          brands.map((brand, key) => {
+            return (
+              <section key={key} className={styles.imageWrapper}>
+                <img src={brand.imageUrl} alt="" className={styles.image} />
+              </section>
+            )
+          })
+        }
+      </div>
     </div>
   )
 }
