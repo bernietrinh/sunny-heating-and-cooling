@@ -20,8 +20,13 @@ const styles = {
     maxWidth: '100rem',
     display: 'flex',
     justifyContent: 'space-between',
-    padding: '10rem',
-    margin: '0 auto'
+    margin: '0 auto',
+    '@media (max-width: 39.9em)': {
+      padding: '3rem'
+    },
+    '@media (min-width: 40em)': {
+      padding: '10rem'
+    }
   }),
   imageWrapper: cxs({
     width: '25%'

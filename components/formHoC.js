@@ -99,7 +99,8 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '80rem'
+    minHeight: '80rem',
+    width: '100%'
   })
 };
 

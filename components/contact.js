@@ -10,14 +10,12 @@ const styles = {
   }),
   info: cxs({
     position: 'absolute',
-    top: 0,
     right: 0,
     bottom: 0,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    width: '50%',
     zIndex: '5',
     background: 'rgba(1, 36, 50, .8)',
     color: '#FFFFFF',
@@ -35,22 +33,31 @@ const styles = {
       lineHeight: '1.2',
       fontSize: '1.8rem',
       fontWeight: '300'
+    },
+    '@media (max-width: 39.9em)': {
+      left: 0,
+      width: '100%',
+      height: '100%'
+    },
+    '@media (min-width: 40em)': {
+      top: 0,
+      width: '50%'
     }
   }),
   map: cxs({
     width: '100%',
-    height: '35rem'
+    height: '40rem'
   })
 };
 
 const markerPosition = {
-  lat: 43.68,
-  lng: -79.33
+  lat: 43.806940,
+  lng: -79.290915
 };
 
 const mapCenterPosition = {
-  lat: 43.68,
-  lng: -79.33
+  lat: 43.806152,
+  lng: -79.273481
 };
 
 const mapOptions = {
@@ -66,11 +73,10 @@ export default () => {
       <div className={styles.info}>
         <div>
           <h4>Address</h4>
-          <p>123 Worth St.</p>
-          <p>Toronto, On</p>
+          <p>63 Silver Star Blvd. Unit C18</p>
+          <p>Toronto, ON</p>
           <h4>Contact Information</h4>
-          <p>416-567-7548</p>
-          <p>sunny@email.com</p>
+          <p>Office: 416-567-7548</p>
         </div>
       </div>
 

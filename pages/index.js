@@ -58,8 +58,6 @@ class Index extends Component {
       <Contact />
       <FormHoC />
       <Products />
-
-      }
     </div>
   }
 }

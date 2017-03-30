@@ -5,12 +5,8 @@ class Banner extends React.Component {
 
   constructor(props) {
     super(props);
-
-    // const bannerBtnStyles = Object.assign(this.props.buttonStyles, { color: '#FFFFFF' });
-    // this.state = {
-    //   servicesButtonStyles: cxs(Object.assign({ marginLeft: '1rem' }, bannerBtnStyles))
-    // };
   }
+
   render() {
     return (
       <div className={styles.banner}>
@@ -42,7 +38,12 @@ const styles = {
     marginTop: '1rem',
     marginLeft: '1rem',
     marginRight: '1rem',
-    alignItems: 'center'
+    flexDirection: 'column',
+    alignItems: 'left',
+    '@media (min-width: 40em)': {
+      alignItems: 'center',
+      flexDirection: 'row'
+    }
   }),
   contact: cxs({
     padding: '.5rem',
@@ -61,18 +62,22 @@ const styles = {
     minHeight: '46rem',
     background: `url('/static/images/banner.jpg') no-repeat`,
     backgroundSize: 'cover',
-    backgroundPosition: 'top left',
+    backgroundPosition: 'top center',
     backgroundColor: 'rgba(69, 145, 175, 1)',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    '@media (min-width: 40em)': {
+      backgroundPosition: 'top left'
+    }
   }),
   callout: cxs({
     display: 'flex',
-    flexDirection: 'row-reverse',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    padding: '2rem 4rem 2rem 4rem'
+    '@media (min-width: 40em)': {
+      flexDirection: 'row-reverse',
+      justifyContent: 'flex-start',
+      alignItems: 'center'
+    }
   }),
   title: cxs({
     fontFamily: `'Montserrat', sans-serif`,
@@ -89,9 +94,15 @@ const styles = {
   }),
   content: cxs({
     paddingLeft: '3rem',
-    paddingRight: '15rem',
-    maxWidth: '46rem',
-    width: '40%'
+    '@media (max-width: 39.9em)': {
+      paddingRight: '3rem',
+      width: '80%'
+    },
+    '@media (min-width: 40em)': {
+      maxWidth: '46rem',
+      width: '40%',
+      paddingRight: '15rem'
+    }
   }),
 };
 

@@ -45,8 +45,10 @@ export default () => {
           <h2 className={styles.descHeader}>We are here to serve you.</h2>
           <p className={styles.descBody}>
             We are a team of professionally licensed technicians offering friendly, reliable and timely service in the
-            Greater Toronto Area, York, and Durham region. Whether it's installing your air conditioner or annual furnace
-            maintenance, at Sunny, we provide top quality service at affordable rates. Contact us today to chat about our
+            Greater Toronto Area, York, and Durham region. Whether it's installing your air conditioner or annual
+            furnace
+            maintenance, at Sunny, we provide top quality service at affordable rates. Contact us today to chat about
+            our
             products or for a free quote!
           </p>
         </div>
@@ -62,7 +64,7 @@ export default () => {
             )
           })
         }
-        </div>
+      </div>
     </div>
   )
 }
@@ -94,28 +96,17 @@ const styles = {
     justifyContent: 'center'
   }),
   desc: cxs({
-    padding: '10rem',
     maxWidth: '100rem',
-    h2: {
-      color: '#FFFFFF'
+    color: '#FFFFFF',
+    '@media (max-width: 39.9em)': {
+      padding: '3rem'
     },
-    p: {
-      color: '#FFFFFF'
+    '@media (min-width: 40em)': {
+      padding: '10rem'
     }
   }),
   descHeader: cxs(headerText),
   descBody: cxs(bodyText),
-  icons: cxs({
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '100%'
-  }),
-  icon: cxs({
-    width: '30%',
-    img: {
-      width: '6rem'
-    }
-  }),
   services: cxs({
     maxWidth: '100rem',
     padding: '8rem 0',
@@ -126,8 +117,11 @@ const styles = {
   }),
   service: cxs({
     textAlign: 'left',
-    width: '30%',
+    width: '100%',
     marginBottom: '2.5rem',
     marginTop: '2.5rem',
+    '@media (min-width: 40em)': {
+      width: '30%'
+    }
   })
 };

@@ -211,20 +211,25 @@ const styles = {
     fontFamily: `'Montserrat', sans-serif`,
     fontWeight: 'bold',
     lineHeight: '1.4',
-    marginTop: '4rem',
+    margin: '4rem auto',
     padding: '0 2rem',
   }),
   form: cxs({
     margin: '4rem 0',
     background: '#E7E7E7',
-    padding: '4rem 8rem',
-    width: '30rem',
+    padding: '4rem',
+    width: '70%',
     maxHeight: '100%',
     textAlign: 'center',
     section: {
       display: 'flex',
       flexDirection: 'column',
       marginBottom: '2rem'
+    },
+    '@media (min-width: 40em)': {
+      width: '30rem',
+      paddingLeft: '8rem',
+      paddingRight: '8rem'
     }
   }),
   textArea: cxs({
