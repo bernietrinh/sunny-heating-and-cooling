@@ -77,6 +77,7 @@ export default () => {
           <p>Toronto, ON</p>
           <h4>Contact Information</h4>
           <p>Office: 416-567-7548</p>
+          <p>sunny-heating@hotmail.com</p>
         </div>
       </div>
 
