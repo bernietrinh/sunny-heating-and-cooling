@@ -215,7 +215,7 @@ const styles = {
     padding: '0 2rem',
   }),
   form: cxs({
-    margin: '4rem 0',
+    margin: '4rem auto',
     background: '#E7E7E7',
     padding: '4rem',
     width: '70%',
