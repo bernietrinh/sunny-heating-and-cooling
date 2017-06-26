@@ -61,6 +61,8 @@ const mapCenterPosition = {
 };
 
 const mapOptions = {
+  streetViewControl: false,
+  zoomControl: false,
   scrollwheel: false,
   mapTypeControl: false,
   disableDoubleClickZoom: true,

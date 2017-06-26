@@ -68,7 +68,8 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     '@media (min-width: 40em)': {
-      backgroundPosition: 'top left'
+      backgroundPosition: 'top left',
+      paddingBottom: '15rem'
     }
   }),
   callout: cxs({
